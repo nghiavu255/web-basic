@@ -1,0 +1,50 @@
+POST  http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"admin2",
+    "password":"nghia255",
+    "role":"admin"
+}
+###
+POST  http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username":"nghia9",
+    "password":"nghia255"
+}
+###
+POST  http://localhost:5000/api/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTZlYzVmYTI4MmIyYzkxMDI2NDBkZTIiLCJpYXQiOjE2MzQ2NTAxNTd9.1bkFAB0Ewx5hq9Yysnos3oY9fUCL3IKPLggvexC_5QY
+
+{
+    "product":"Kính 6",
+    "description":"Sản phẩm thời trang kính mắt Mỹ cao cấp chống tia UV ",
+    "price": "1500000",
+    "quantity":"113",
+    "image":"j1-1.jpg",
+    "code":"OMEGA-12"
+}
+###
+GET  http://localhost:5000/api/products
+
+
+###
+PUT http://localhost:5000/api/products/616ec5fa282b2c9102640de2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTZlYzVmYTI4MmIyYzkxMDI2NDBkZTIiLCJpYXQiOjE2MzQ2NTM1Njl9.uecCfeil3AZIkh91E778ge2zQNTSvlBLse7tjFah0yM
+
+{
+    "product":"Kính GUCCI",
+    "description":"Sản phẩm thời trang kính mắt Mỹ cao cấp chống tia UV ",
+    "price": "1000000",
+    "quantity":"10",
+    "code":"GUCCI-UV"
+}
+
+###
+
+DELETE http://localhost:5000/api/posts/615c55281d1fbda382f42e41
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTVjNTQ1Y2YxNmNkNjdkMTRmMjAyYTAiLCJpYXQiOjE2MzM0NDEyOTF9.ATMONXFHgcdhNDTYeUFZfGBk6YxHOa7qUT1YV9SkZN0
